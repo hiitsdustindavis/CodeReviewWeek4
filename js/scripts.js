@@ -4,9 +4,9 @@ function Pizza(pizzaSize, pizzaToppings, toppingsAdded) {
   this.toppingsAdded = 0;
 }
 
-// Pizza.prototype.add = function(topping) {
-//   this.pizzaToppings.push(topping);
-// };
+Pizza.prototype.add = function(topping) {
+  this.pizzaToppings.push(topping);
+};
 
 Pizza.prototype.add = function(topping) {
   var currentPizza = this.pizzaToppings[this.toppingsAdded];

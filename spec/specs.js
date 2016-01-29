@@ -9,7 +9,7 @@ describe('Pizza', function() {
 
   it("adds the addedToppings method to all pizzas", function() {
       var testPizza = new Pizza("Feelings","Multiple Ben Afflecks");
-      expect(testPizza.addedToppings()).to.equal("Feelings, Multiple Ben Afflecks");
+      expect(testPizza.toppingsAdded).to.equal(0);
   });
 
 });
