@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Treetunes</title>
+    <title>Slice of Paradise</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
 </head>
 
 <body>
 
-    <!-- <div>
-        <h1>Treetunes</h1>
+  <div class="container">
+    <h1>Welcome to a Slice of Paradise</h1>
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Size?</h3>
+          <label for="sel1">What Size?</label></br>
+          <select class="form-control" id="sel2">
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
 
-        <ol id="playlist">
-        </ol>
-        <button id="play">Play</button>
-        <button id="next">Next</button>
-        <button id="stop">Stop</button>
+        <div class="col-sm-4">
+          <h3>How Many?</h3>
+          <label for="sel2">How Many?</label></br>
+          <input type="number" class="form-control" id="quantity">
+        </div>
 
-    </div> -->
+        <div class="col-sm-4">
+          <h3>Toppings?</h3>
+          <label for="sel2">Toppings?</label></br>
+          <select multiple class="form-control" id="sel2">
+            <option>hair</option>
+            <option>face</option>
+            <option>crab meat</option>
+            <option>torched</option>
+            <option>grab</option>
+          </select>
+        </div>
+      </div>
+
+
+        <button class=btn id=getPrice>Get Price</button>
+
+
 
     <script src="js/scripts.js"></script>
+    <script src="js/jquery-1.12.0.js"></script>
     <!-- <script src="media.js"></script>
     <script src="movie.js"></script>
     <script src="song.js"></script>
