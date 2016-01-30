@@ -1,9 +1,31 @@
+--- PSEUDO CODE ---
+
+One Pizza Price Calculator:
+  var sizePrice= if (size === "medium"){return pizzaBasePrice} if (size === "large"){return size + 5.}
+
+  toppings: price/topping = 1
+
+  var toppingsPrice = this.pizzaToppings.price += (var # of toppings selected)
+
+  var quantity = userinput
+
+  var onePizza = (sizePrice + toppingsPrice) * quantity
+
+
+Print to html:
+  var toppingsSelected: for loop [select list items array].join (', ')
+  
+  "Thank you for your order. Your" + pizzaSize + "pizza with" + toppingsSelected + " will cost " + onePizza + ".";
+
+--- PSEUDO CODE ---
+
 function Pizza(pizzaSize, pizzaQuantity) {
   this.pizzaSize = pizzaSize;
   this.pizzaToppings = [];
   this.pizzaQuantity = pizzaQuantity
   this.pizzaBasePrice = 10;
 }
+
 
 Pizza.prototype.sizePrice = function() {
   if (this.pizzaSize === "Medium") {
