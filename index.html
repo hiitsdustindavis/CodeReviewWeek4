@@ -10,11 +10,12 @@
 
   <div class="container">
     <h1>Welcome to a Slice of Paradise</h1>
+    <form id=pizzaoptions>
       <div class="row">
         <div class="col-sm-4">
           <h3>Size?</h3>
           <label for="sel1">What Size?</label></br>
-          <select class="form-control" id="sel2">
+          <select class="form-control" id="size">
             <option>Medium</option>
             <option>Large</option>
           </select>
@@ -29,19 +30,17 @@
         <div class="col-sm-4">
           <h3>Toppings?</h3>
           <label for="sel2">Toppings?</label></br>
-          <select multiple class="form-control" id="sel2">
-            <option>hair</option>
-            <option>face</option>
-            <option>crab meat</option>
-            <option>torched</option>
-            <option>grab</option>
+          <select multiple class="form-control" id="toppings">
+            <option>Metaphysics</option>
+            <option>FunNoodles</option>
+            <option>Dubstep Beat Drop</option>
+            <option>Microbes</option>
+            <option>Feelings</option>
           </select>
         </div>
       </div>
-
-
-        <button class=btn id=getPrice>Get Price</button>
-
+      <button class=btn id=getPrice>Get Price</button>
+    </form>
 
 
     <script src="js/scripts.js"></script>
