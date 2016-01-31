@@ -29,10 +29,12 @@ $(document).ready(function() {
 debugger;
     var inputtedSize = $("select.size").val();
     var inputtedToppings = $("select.toppings").val();
-    for (var i = 0; i < this.pizzaToppings)
-    var newPizza = new Pizza(inputtedSize,inputtedToppings);
-    //
-    // $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
+    var toppingString = inputtedToppings.join(", ")
+    var inputtedQuantity = $("input#quantity").val();
+    var totalPrice = $(Pizza.prototype.totalPriceCalc()).val();
+    var newPizza = new Pizza(inputtedSize, inputtedToppings, inputtedQuantity);
+
+    $("div.output").append('<p>Thank you for ordering ' + inputtedQuantity + " " + toppingString + ' pizza(s).</p></br><p>Your total is ' + totalPrice);
 
     // $("input#new-first-name").val("");
     // $("input#new-last-name").val("");
