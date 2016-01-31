@@ -7,16 +7,15 @@ function Pizza(pizzaSize, toppings, pizzaQuantity) {
 
 
 Pizza.prototype.sizePriceCalc = function() {
-  var sizeVal = 0
   if (this.pizzaSize === "Medium") {
     return 0;
   } else {
   }
-    return sizeVal + 5;
+    return + 5;
 }
 
 Pizza.prototype.toppingsPriceCalc = function() {
-  var totalToppings = this.pizzaToppings;
+  var totalToppings = this.pizzaToppings.length;
   return totalToppings;
 }
 
@@ -27,7 +26,7 @@ Pizza.prototype.totalPriceCalc = function() {
 $(document).ready(function() {
   $("form#pizza-options").submit(function(event) {
     event.preventDefault();
-debugger;
+// debugger;
     var inputtedSize = $("select.size").val();
     var inputtedToppings = $("select.toppings").val();
     var inputtedToppingsVal = inputtedToppings.length;
@@ -35,9 +34,10 @@ debugger;
     var inputtedQuantity = parseInt($("input#quantity").val());
 
     var newPizza = new Pizza(inputtedSize, inputtedToppings, inputtedQuantity);
+    var inputtedSizeVal = newPizza.sizePriceCalc();
     var totalPrice = (inputtedSizeVal + inputtedToppingsVal) * inputtedQuantity;
 
-    $("div.output").append('<p>Thank you for ordering ' + inputtedQuantity + " " + toppingString + ' pizza(s).</p></br><p>Your total is ' + totalPrice);
+    $("div.output").append('<p>Thank you for ordering ' + inputtedQuantity + " " + toppingString + ' pizza(s).</p></br><p>Your total is $' + totalPrice + ".00 dollars");
 
     // $("input#new-first-name").val("");
     // $("input#new-last-name").val("");
