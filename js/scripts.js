@@ -11,7 +11,7 @@ Pizza.prototype.sizePriceCalc = function() {
     return 8;
   } else {
   }
-    return 14;
+    return 12;
 }
 
 Pizza.prototype.toppingsPriceCalc = function() {
@@ -42,10 +42,20 @@ $(document).ready(function() {
   		outputDiv.innerHTML = orderdetails;
     }
 
-    $("div#output").html('<div class="result container-fluid"><div class="container"><h3>Thank you for ordering ' + inputtedQuantity + ' <em>"' + toppingString + ' pizza(s)"</em></h3><h2>Your total is $' + totalPrice + '.00 dollars</h2></div></div>');
-
-    // $("select.size").val("");
-    // $("select.toppings").val("");
-    // $("input#quantity").val("");
+    $("div#output").html('<div class="result container-fluid">' +
+      '<div class="container">' +
+        '<h3>Thank you for ordering ' +
+        inputtedQuantity +
+        ' <em>"' +
+        toppingString +
+        ' pizza(s)"</em></h3>' +
+        '<h2>Your total is $' +
+        totalPrice +
+        '.00 dollars</h2>' +
+        '<div class="video-container">' +
+          '<iframe width="800px" height="450px" src="https://www.youtube.com/embed/CJEoASUMZbI" frameborder="0" allowfullscreen></iframe>' +
+        '</div>' +
+      '</div>' +
+    '</div>');
   });
 });

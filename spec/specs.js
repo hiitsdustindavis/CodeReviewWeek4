@@ -8,7 +8,7 @@ describe('Pizza', function() {
 
   it("adds the sizePriceCalc method to all pizzas", function() {
       var testPizza = new Pizza("Medium");
-      expect(testPizza.sizePriceCalc()).to.equal(0);
+      expect(testPizza.sizePriceCalc()).to.equal(8);
   });
 
   it("adds the toppingsPriceCalc method to all pizzas", function() {
@@ -19,6 +19,6 @@ describe('Pizza', function() {
   it("adds the totalPriceCalc method to all pizzas", function() {
       var testPizza = new Pizza("Large", [], 2);
       testPizza.pizzaToppings.push("1", "2", "3")
-      expect(testPizza.totalPriceCalc()).to.equal(16);
+      expect(testPizza.totalPriceCalc()).to.equal(30);
   });
 });
