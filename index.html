@@ -7,7 +7,6 @@
 </head>
 
 <body>
-  <!-- <div class="container-fluid"> -->
   <div class="jumbotron">
     <div class="container">
       <h1>Welcome to a Slice of Paradise</h1>
@@ -18,6 +17,7 @@
   <div class="container">
     <form id=pizza-options>
       <div class="row">
+<!-- SELECT SIZE -->
         <div class="col-sm-4">
           <h3>1. Pick a Size</h3>
           <label for="sel1">Any size you like!</label></br>
@@ -27,12 +27,14 @@
           </select>
         </div>
 
+<!-- INPUT QUANTITY -->
         <div class="col-sm-4">
           <h3>2. Enter the quantity</h3>
           <label for="sel2">Enter any number you'd like.</label></br>
           <input type="number" class="form-control" id="quantity">
         </div>
 
+<!-- SELECT TOPPINGS -->
         <div class="col-sm-4">
           <h3>3. Select your Toppings</h3>
           <label for="sel2">To select multiple items click and drag or hold the control key and click. <em>All Toppings Are $1 Each</em></label></br>
@@ -44,24 +46,16 @@
             <option>Feelings</option>
           </select>
         </div>
+
       </div>
       <button class=btn id=getPrice>GIMME PIZZA!</button>
     </form>
     </div>
     </div>
-
+<!-- SUBMIT FORM RESULTS. SEE SCRIPT.JS FOR CONTENTS -->
       <div id="output">
       </div>
-
-
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
-
-    <!-- <script src="media.js"></script>
-    <script src="movie.js"></script>
-    <script src="song.js"></script>
-    <script src="app.js"></script> -->
-
 </body>
-
 </html>
