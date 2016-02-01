@@ -2,35 +2,41 @@
 <html>
 <head>
     <title>Slice of Paradise</title>
-    <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 
 <body>
+  <!-- <div class="container-fluid"> -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Welcome to a Slice of Paradise</h1>
+    </div>
+  </div>
 
+  <div class="form container-fluid">
   <div class="container">
-    <h1>Welcome to a Slice of Paradise</h1>
     <form id=pizza-options>
       <div class="row">
         <div class="col-sm-4">
-          <h3>Size?</h3>
-          <label for="sel1">What Size?</label></br>
-          <select class="select size">
+          <h3>1. Pick a Size</h3>
+          <label for="sel1">Any size you like!</label></br>
+          <select class="select form-control size">
             <option>Medium</option>
             <option>Large</option>
           </select>
         </div>
 
         <div class="col-sm-4">
-          <h3>How Many?</h3>
-          <label for="sel2">How Many?</label></br>
+          <h3>2. Enter the quantity</h3>
+          <label for="sel2">Enter any number you'd like.</label></br>
           <input type="number" class="form-control" id="quantity">
         </div>
 
         <div class="col-sm-4">
-          <h3>Toppings?</h3>
-          <label for="sel2">Toppings?</label></br>
-          <select multiple class="select toppings">
+          <h3>3. Select your Toppings</h3>
+          <label for="sel2">To select multiple items click and drag or hold the control key and click.</label></br>
+          <select multiple class="select form-control toppings">
             <option>Metaphysics</option>
             <option>FunNoodles</option>
             <option>Dubstep Beat Drop</option>
@@ -39,12 +45,16 @@
           </select>
         </div>
       </div>
-      <button class=btn id=getPrice>Get Price</button>
+      <button class= btn btn-lg id=getPrice>Get Price</button>
     </form>
-    <div class="output">
+    </div>
     </div>
 
-  <script src="js/jquery-1.12.0.js"></script>
+      <div id="output">
+      </div>
+    
+
+    <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
 
     <!-- <script src="media.js"></script>

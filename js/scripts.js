@@ -8,10 +8,10 @@ function Pizza(pizzaSize, toppings, pizzaQuantity) {
 
 Pizza.prototype.sizePriceCalc = function() {
   if (this.pizzaSize === "Medium") {
-    return 0;
+    return 8;
   } else {
   }
-    return + 5;
+    return 14;
 }
 
 Pizza.prototype.toppingsPriceCalc = function() {
@@ -27,8 +27,8 @@ $(document).ready(function() {
   $("form#pizza-options").submit(function(event) {
     event.preventDefault();
 // debugger;
-    var inputtedSize = $("select.size").val();
-    var inputtedToppings = $("select.toppings").val();
+    var inputtedSize = $("select.form-control.size").val();
+    var inputtedToppings = $("select.form-control.toppings").val();
     var inputtedToppingsVal = inputtedToppings.length;
     var toppingString = inputtedToppings.join(", ")
     var inputtedQuantity = parseInt($("input#quantity").val());
@@ -37,9 +37,15 @@ $(document).ready(function() {
     var inputtedSizeVal = newPizza.sizePriceCalc();
     var totalPrice = (inputtedSizeVal + inputtedToppingsVal) * inputtedQuantity;
 
-    $("div.output").append('<p>Thank you for ordering ' + inputtedQuantity + " " + toppingString + ' pizza(s).</p></br><p>Your total is $' + totalPrice + ".00 dollars");
+    function print(orderdetails) {
+      var outputDiv = document.getElementById('output');
+  		outputDiv.innerHTML = orderdetails;
+    }
 
-    // $("input#new-first-name").val("");
-    // $("input#new-last-name").val("");
+    $("div#output").html('<div class="result container-fluid"><div class="container"><h3>Thank you for ordering ' + inputtedQuantity + ' <em>"' + toppingString + ' pizza(s)"</em></h3><h2>Your total is $' + totalPrice + '.00 dollars</h2></div></div>');
+
+    // $("select.size").val("");
+    // $("select.toppings").val("");
+    // $("input#quantity").val("");
   });
 });
