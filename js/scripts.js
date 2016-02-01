@@ -41,7 +41,11 @@ $(document).ready(function() {
       var outputDiv = document.getElementById('output');
   		outputDiv.innerHTML = orderdetails;
     }
-
+    $( "div#output" ).slideDown( "slow", function() {
+    // Animation complete.
+    $('html, body').animate({
+      scrollTop: $("#output").offset().top
+    }, 800);
     $("div#output").html('<div class="result container-fluid">' +
       '<div class="container">' +
         '<h3>Thank you for ordering ' +
@@ -57,5 +61,6 @@ $(document).ready(function() {
         '</div>' +
       '</div>' +
     '</div>');
+    });
   });
 });
